@@ -5,53 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Study"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="741" WindowStartupLocation="CenterScreen" MinHeight="200" MinWidth="400">
-    <WrapPanel>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Navy"/>
-        <Separator Width="10"/>
-        <Button Content="Blue" Width="40" Foreground="Blue"/>
-        <Separator Width="10"/>
-        <Button Content="Aqua" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Teal" Width="40" Foreground="Teal"/>
-        <Separator Width="10"/>
-        <Button Content="Olive" Width="40" Foreground="Olive"/>
-        <Separator Width="10"/>
-        <Button Content="Green" Width="40" Foreground="Green"/>
-        <Separator Width="10"/>
-        <Button Content="Lime" Width="40" Foreground="Lime"/>
-        <Separator Width="10"/>
-        <Button Content="Yellow" Width="40" Foreground="Yellow"/>
-        <Separator Width="10"/>
-        <Button Content="Orange" Width="50" Foreground="Orange"/>
-        <Separator Width="10"/>
-        <Button Content="Red" Width="40" Foreground="Red"/>
-        <Separator Width="10"/>
-        <Button Content="Maroon" Width="50" Foreground="Maroon"/>
-        <Separator Width="10"/>
-        <Button Content="Fuchsia" Width="50" Foreground="Fuchsia"/>
-        <Separator Width="10"/>
-        <Button Content="Purple" Width="40" Foreground="Purple"/>
-        <Separator Width="10"/>
-        <Button Content="Black" Width="40" Foreground="Black"/>
-        <Separator Width="10"/>
-        <Button Content="Silver" Width="40" Foreground="Silver"/>
-        <Separator Width="10"/>
-        <Button Content="Gray" Width="40" Foreground="Gray"/>
-        <Separator Width="10"/>
-        <Button Content="White" Width="40" Foreground="White"/>
-        
-    </WrapPanel>
-    <!--<Grid>
+        Title="MainWindow" Height="450" Width="600" WindowStartupLocation="CenterScreen" MinHeight="200" MinWidth="600" MaxWidth="600">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-    </Grid>-->
+        <WrapPanel>
+            <Separator Width="10"/>
+            <Button Content="Navy" Width="40" Foreground="Navy"/>
+            <Separator Width="10"/>
+            <Button Content="Blue" Width="40" Foreground="Blue"/>
+            <Separator Width="10"/>
+            <Button Content="Aqua" Width="40" Foreground="Aqua"/>
+            <Separator Width="10"/>
+            <Button Content="Teal" Width="40" Foreground="Teal"/>
+            <Separator Width="10"/>
+            <Button Content="Olive" Width="40" Foreground="Olive"/>
+            <Separator Width="10"/>
+            <Button Content="Green" Width="40" Foreground="Green"/>
+            <Separator Width="10"/>
+            <Button Content="Lime" Width="40" Foreground="Lime"/>
+            <Separator Width="10"/>
+            <Button Content="Yellow" Width="40" Foreground="Yellow"/>
+            <Separator Width="10"/>
+            <Button Content="Orange" Width="50" Foreground="Orange"/>
+            <Separator Width="10"/>
+            <Button Content="Red" Width="40" Foreground="Red"/>
+            <Separator Width="10"/>
+            <Button Content="Maroon" Width="50" Foreground="Maroon"/>
+            <Separator Width="10"/>
+            <Button Content="Fuchsia" Width="50" Foreground="Fuchsia"/>
+            <Separator Width="10"/>
+            <Button Content="Purple" Width="40" Foreground="Purple"/>
+            <Separator Width="10"/>
+            <Button Content="Black" Width="40" Foreground="Black"/>
+            <Separator Width="10"/>
+            <Button Content="Silver" Width="40" Foreground="Silver"/>
+            <Separator Width="10"/>
+            <Button Content="Gray" Width="40" Foreground="Gray"/>
+            <Separator Width="10"/>
+            <Button Content="White" Width="40" Foreground="White"/>
+        </WrapPanel>
+    </Grid>
 </Window>
