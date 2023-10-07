@@ -5,7 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Study"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="200" MinWidth="400">
+        Title="MainWindow" Height="500" Width="1000" WindowStartupLocation="CenterScreen" MinHeight="350" MinWidth="600">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0">
+            <GradientStop Color="#FF3A3A" Offset="0" />
+            <GradientStop Color="#E44040" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            
+        </Grid>
     </Grid>
+
 </Window>
