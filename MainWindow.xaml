@@ -6,52 +6,6 @@
         xmlns:local="clr-namespace:WPF_Study"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="200" MinWidth="400">
-    <WrapPanel>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Navy"/>
-        <Separator Width="10"/>
-        <Button Content="Blue" Width="40" Foreground="Blue"/>
-        <Separator Width="10"/>
-        <Button Content="Aqua" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
-        
-    </WrapPanel>
-    <!--<Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-    </Grid>-->
+    <Grid>
+    </Grid>
 </Window>
