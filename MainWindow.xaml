@@ -14,7 +14,7 @@
         <WrapPanel>
             <Separator Width="10"/>
             <Button Content="Navy" Width="40" Foreground="Navy"/>
-            <Separator Width="10"/>
+            <Separator Width="10"/> 
             <Button Content="Blue" Width="40" Foreground="Blue"/>
             <Separator Width="10"/>
             <Button Content="Aqua" Width="40" Foreground="Aqua"/>
