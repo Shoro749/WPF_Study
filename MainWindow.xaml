@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Study"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="200" MinWidth="400">
+        Title="MainWindow" Height="450" Width="741" WindowStartupLocation="CenterScreen" MinHeight="200" MinWidth="400">
     <WrapPanel>
         <Separator Width="10"/>
         <Button Content="Navy" Width="40" Foreground="Navy"/>
@@ -14,33 +14,33 @@
         <Separator Width="10"/>
         <Button Content="Aqua" Width="40" Foreground="Aqua"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Teal" Width="40" Foreground="Teal"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Olive" Width="40" Foreground="Olive"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Green" Width="40" Foreground="Green"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Lime" Width="40" Foreground="Lime"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Yellow" Width="40" Foreground="Yellow"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Orange" Width="50" Foreground="Orange"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Red" Width="40" Foreground="Red"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Maroon" Width="50" Foreground="Maroon"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Fuchsia" Width="50" Foreground="Fuchsia"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Purple" Width="40" Foreground="Purple"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Black" Width="40" Foreground="Black"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Silver" Width="40" Foreground="Silver"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="Gray" Width="40" Foreground="Gray"/>
         <Separator Width="10"/>
-        <Button Content="Navy" Width="40" Foreground="Aqua"/>
+        <Button Content="White" Width="40" Foreground="White"/>
         
     </WrapPanel>
     <!--<Grid>
