@@ -3,9 +3,78 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:WPF_Study"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinHeight="200" MinWidth="400">
+        Title="MainWindow" Height="400" MaxHeight="400" MinHeight="400" Width="775" MinWidth="775" MaxWidth="775" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+
+        <TextBox
+    Height="Auto" x:Name="tbMain"
+    FontSize="15" FontWeight="SemiBold"
+    Grid.Row="1"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}"
+    Style="{StaticResource MaterialDesignOutlinedTextBox}"
+    TextWrapping="Wrap"
+    VerticalScrollBarVisibility="Auto" />
+
+        <!--Menu-->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Speed: 0 chars/min" FontWeight="SemiBold"/>
+            <Label Content="Fails: 0" Grid.Column="1" FontWeight="SemiBold"/>
+            <!--Difficulty-->
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Fifficulty: " FontWeight="SemiBold"/>
+                <Slider
+  Maximum="4"
+  Minimum="0" Grid.Column="1"
+  Style="{StaticResource MaterialDesignDiscreteSlider}"
+  TickFrequency="{Binding DiscreteHorizontal.TickFrequency}"
+  TickPlacement="BottomRight"
+  Value="40" />
+            </Grid>
+            <Button Content="Start" x:Name="bStart" Grid.Row="1" Grid.Column="2" Foreground="White" Background="Gray" BorderBrush="Black"/>
+            <Button Content="Stop" x:Name="bStop" Grid.Row="1" Grid.Column="3" Foreground="White" Background="Gray" BorderBrush="Black"/>
+        </Grid>
+
+        <!--Keyboard-->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="stMain" Orientation="Horizontal" Grid.Row="0"/>
+            <StackPanel x:Name="stMain2" Orientation="Horizontal" Grid.Row="1"/>
+            <StackPanel x:Name="stMain3" Orientation="Horizontal" Grid.Row="2"/>
+            <StackPanel x:Name="stMain4" Orientation="Horizontal" Grid.Row="3"/>
+            <StackPanel x:Name="stMain5" Orientation="Horizontal" Grid.Row="4"/>
+        </Grid>
     </Grid>
 </Window>
