@@ -29,13 +29,34 @@ namespace WPF_Study
         }
 
         int n;
-        string[] str = new string[10];
+        string str;
         double[] number = new double[10];
         string[] op = new string[10];
 
-        void resultUpdate(string str)
+        void strUpdate(string str)
         {
-            result.Text = str;
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (number[i] != 0)
+                {
+                    if (str == "0")
+                    {
+                        str = "";
+                    }
+                    str += number[i];
+                }
+                else { break; }
+                if (op[i] != null)
+                {
+                    str += op[i];
+                }
+                else { break; }
+            }
+            if (str == " ") 
+            {
+                str = "0";
+            }
+            else { input.Text = str; }
         }
 
         private void Button0_Click(object sender, RoutedEventArgs e)
@@ -44,9 +65,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
@@ -59,9 +78,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 1;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
@@ -74,9 +91,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 2;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button3_Click(object sender, RoutedEventArgs e)
@@ -89,9 +104,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 3;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button4_Click(object sender, RoutedEventArgs e)
@@ -104,9 +117,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 4;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button5_Click(object sender, RoutedEventArgs e)
@@ -119,9 +130,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 5;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button6_Click(object sender, RoutedEventArgs e)
@@ -134,9 +143,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 6;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button7_Click(object sender, RoutedEventArgs e)
@@ -149,9 +156,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 7;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button8_Click(object sender, RoutedEventArgs e)
@@ -164,9 +169,7 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 8;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void Button9_Click(object sender, RoutedEventArgs e)
@@ -179,62 +182,195 @@ namespace WPF_Study
             {
                 number[n] = number[n] * 10 + 9;
             }
-            str[n] = Convert.ToString(number[0]);
-            input.Text = str[n];
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             op[n] = "+";
             n++;
-            input.Text = str[n] + "+";
-            resultUpdate(str[n]);
+            strUpdate(str);
         }
 
         private void ButtonMinus_Click(object sender, RoutedEventArgs e)
         {
-
+            op[n] = "-";
+            n++;
+            strUpdate(str);
         }
 
         private void ButtonMult_Click(object sender, RoutedEventArgs e)
         {
-
+            op[n] = "*";
+            n++;
+            strUpdate(str);
         }
 
         private void ButtonDiv_Click(object sender, RoutedEventArgs e)
         {
-
+            op[n] = "/";
+            n++;
+            strUpdate(str);
         }
 
         private void ButtonC_Click(object sender, RoutedEventArgs e)
         {
-
+            n = 0;
+            str = "0";
+            for (int i = 0; i < number.Length; i++) 
+            {
+                number[i] = 0;
+                op[i] = " ";
+            }
+            result.Text = "Result";
+            input.Text = str;
         }
 
         private void ButtonPerc_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            MessageBox.Show("Ця кнопка не працює!");
         }
 
         private void ButtonX_Click(object sender, RoutedEventArgs e)
         {
-
+            if (number[0] != 0)
+            {
+                str = input.Text;
+                string t = Convert.ToString(str[str.Length - 1]);
+                if (t == "+" || t == "-" || t == "*" || t == "/")
+                {
+                    for (int i = 0; i < op.Length; i++)
+                    {
+                        if (op[i] == null)
+                        {
+                            op[i - 1] = null;
+                            str = " ";
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < number.Length; i++)
+                    {
+                        if (number[i] == 0)
+                        {
+                            number[i - 1] = Math.Floor(number[i - 1] / 10);
+                            str = " ";
+                        }
+                    }
+                }
+                strUpdate(str);
+            }
         }
 
         private void ButtonDot_Click(object sender, RoutedEventArgs e)
         {
-
+            str = input.Text;
+            string t = Convert.ToString(str[str.Length - 1]);
+            if (t == "+" || t == "-" || t == "*" || t == "/")
+            {
+                return;
+            }
+            MessageBox.Show("Вибачаюсь! Але ця кнопка не працює!");
         }
 
         private void ButtonIsEqual_Click(object sender, RoutedEventArgs e)
         {
+            double res = 0;
+            int index = 0;
+            while (true)
+            {
+                
+                if (number[index] == 0)
+                {
+                    break;
+                }
+                if (op[index] == "+")
+                {
+                    if (number[index+1] != 0)
+                    {
+                        if (res > 0)
+                        {
+                            res += number[index + 1];
+                        }
+                        else
+                        {
+                            res = number[index] + number[index + 1];
+                        }
+                    }
+                }
+                if (op[index] == "-")
+                {
+                    if (number[index + 1] != 0)
+                    {
+                        if (res > 0)
+                        {
+                            res -= number[index + 1];
+                        }
+                        else
+                        {
+                            res = number[index] - number[index + 1];
+                        }
+                    }
+                }
+                if (op[index] == "*")
+                {
+                    if (number[index + 1] != 0)
+                    {
+                        if (res > 0)
+                        {
+                            res *= number[index + 1];
+                        }
+                        else
+                        {
+                            res = number[index] * number[index + 1];
+                        }
+                    }
+                }
+                if (op[index] == "/")
+                {
+                    if (number[index + 1] != 0)
+                    {
+                        if (res > 0)
+                        {
+                            res /= number[index + 1];
+                        }
+                        else
+                        {
+                            if (number[index] == 0) { result.Text = "Error"; }
+                            else { res = number[index] / number[index + 1]; }
+                        }
+                    }
+                }
+                index++;
+            }
+            result.Text = Convert.ToString(res);
+        }
 
+        private void ButtonCE_Click(object sender, RoutedEventArgs e)
+        {
+            str = input.Text;
+            string t = Convert.ToString(str[str.Length - 1]);
+            if (t == "+" || t == "-" || t == "*" || t == "/")
+            {
+                for (int i = 0; i < op.Length; i++)
+                {
+                    if (op[i] == null)
+                    {
+                        op[i - 1] = null;
+                        str = "0";
+                    }
+                }
+            }
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (number[i] == 0)
+                {
+                    number[i - 1] = 0;
+                    str = "0";
+                }
+            }
+            strUpdate(str);
         }
     }
 }
