@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Study.Navigator;
+using WPF_Study.Pages;
 
 namespace WPF_Study
 {
@@ -23,6 +26,26 @@ namespace WPF_Study
         public MainWindow()
         {
             InitializeComponent();
+            NavigatorObject.pageSwitcher = this;
+            NavigatorObject.Switch(new HomeScreen());
+        }
+
+        public Action? CloseAction { get; set; }
+
+        public void Navigate(UserControl nextPage)
+        {
+            this.Content = nextPage;
+        }
+
+        public void Navigate(UserControl nextPage, object state)
+        {
+            this.Content = nextPage;
+            INavigator? s = nextPage as INavigator;
+
+            if (s != null)
+                s.UtilizeState(state);
+            else
+                throw new ArgumentException("NextPage is not INavigator! " + nextPage.Name.ToString());
         }
     }
 }
