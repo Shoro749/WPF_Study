@@ -21,12 +21,12 @@
     Height="Auto" x:Name="tbMain"
     FontSize="15" FontWeight="SemiBold"
     Grid.Row="1"
-    VerticalAlignment="Top"
+    VerticalAlignment="Center"
     AcceptsReturn="True"
     IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}"
     Style="{StaticResource MaterialDesignOutlinedTextBox}"
     TextWrapping="Wrap"
-    VerticalScrollBarVisibility="Auto" />
+    VerticalScrollBarVisibility="Auto" Margin="10,0,10,0" />
 
         <!--Menu-->
         <Grid Grid.Row="0">
@@ -57,8 +57,8 @@
   TickPlacement="BottomRight"
   Value="40" />
             </Grid>
-            <Button Content="Start" x:Name="bStart" Grid.Row="1" Grid.Column="2" Foreground="White" Background="Gray" BorderBrush="Black"/>
-            <Button Content="Stop" x:Name="bStop" Grid.Row="1" Grid.Column="3" Foreground="White" Background="Gray" BorderBrush="Black"/>
+            <Button Content="Start" x:Name="bStart" Grid.Row="1" Grid.Column="2" Width="150" Height="25" Foreground="White" Background="Gray" BorderBrush="Black"/>
+            <Button Content="Stop" x:Name="bStop" Grid.Row="1" Grid.Column="3" Width="150" Height="25" Foreground="White" Background="Gray" BorderBrush="Black"/>
         </Grid>
 
         <!--Keyboard-->
