@@ -20,7 +20,7 @@
         <TextBox
     Height="Auto" x:Name="tbMain"
     FontSize="15" FontWeight="SemiBold"
-    Grid.Row="1"
+    Grid.Row="1" IsReadOnly="True"
     VerticalAlignment="Center"
     AcceptsReturn="True"
     IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}"
@@ -41,7 +41,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Content="Speed: 0 chars/min" FontWeight="SemiBold"/>
-            <Label Content="Fails: 0" Grid.Column="1" FontWeight="SemiBold"/>
+            <TextBlock x:Name="Fails"  Grid.Column="1" FontWeight="SemiBold"/>
             <!--Difficulty-->
             <Grid Grid.Column="2">
                 <Grid.ColumnDefinitions>
@@ -57,8 +57,8 @@
   TickPlacement="BottomRight"
   Value="40" />
             </Grid>
-            <Button Content="Start" x:Name="bStart" Grid.Row="1" Grid.Column="2" Width="150" Height="25" Foreground="White" Background="Gray" BorderBrush="Black"/>
-            <Button Content="Stop" x:Name="bStop" Grid.Row="1" Grid.Column="3" Width="150" Height="25" Foreground="White" Background="Gray" BorderBrush="Black"/>
+            <Button Content="Start" x:Name="bStart" Grid.Row="1" Grid.Column="2" Width="150" Height="25" Foreground="White" Background="Gray" BorderBrush="Black" Click="StartButtonClick"/>
+            <Button Content="Stop" x:Name="bStop" Grid.Row="1" Grid.Column="3" Width="150" Height="25" Foreground="White" Background="Gray" BorderBrush="Black" Click="StopButtonClick"/>
         </Grid>
 
         <!--Keyboard-->

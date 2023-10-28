@@ -20,8 +20,12 @@ namespace WPF_Study
     /// </summary>
     public partial class MainWindow : Window
     {
+        int fails;
+        bool gameStart = false;
+        int indexWord;
         string textForButtons = "`1234567890-=!Tqwertyuiop[]|Casdfghjkl;'ESzxcvbnm,./LRWA QIU";
-        string[] textForTraine = { "Hello", "Hello world!", "I love to program", "I bought 1.5 liters of water", "I don't know where to put 5 stars for this app" };
+        string textForTraine = "hello";
+        string[] textForTraine2 = { "hello", "hello world", "i love to program", "i bought liter of water", "i dont know where to put five stars for this app" };
         List<Button> buttons;
         List<char> buttonTextList;
         int activeButtonIndex = -1;
@@ -30,7 +34,9 @@ namespace WPF_Study
             InitializeComponent();
             buttons = new List<Button>();
             buttonTextList = textForButtons.Distinct().ToList();
-            tbMain.Text = textForTraine[0];
+            fails = 0;
+            indexWord = 0;
+            Fails.Text = "Fails: 0";
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -101,17 +107,70 @@ namespace WPF_Study
                 stMain5.Children.Add(button);
             }
         }
-
-        private void Window_KeyUp(object sender, KeyEventArgs e)
+        private void CheckTrainText(char sign)
         {
-            char symbol = Convert.ToChar(textForTraine[0]);
-            var b = buttons.Find(x => x.Content.ToString() == symbol.ToString());
+            if (textForTraine == "" && indexWord == 4)
+            {
+                tbMain.Text = "You win";
+            }
+            else
+            {
+                if (textForTraine[0] == sign)
+                {
 
+                    textForTraine = textForTraine.Remove(0, 1);
+                    if (textForTraine == "" && indexWord != 4)
+                    {
+                        indexWord++;
+                        textForTraine = textForTraine2[indexWord];
+                    }
+                    tbMain.Text = textForTraine;
+                    tbMain.UpdateLayout();
+                }
+                else
+                {
+                    fails += 1;
+                    Fails.Text = Convert.ToString("Fails: " + fails);
+                }
+            }
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            //if (gameStart == false)
+            //{
+            //    return;
+            //}
+            string textFind;
+            textFind = (e.Key == Key.Space) ? "Space" : char.ToLower(e.Key.ToString()[0]).ToString();
+            Button? b = buttons.Find(x => x.Content.ToString() == textFind.ToString());
+            if (b is not null)
+            {
+                activeButtonIndex = buttons.IndexOf(b);
+                b.Background = Brushes.LightGray;
+            }
+            CheckTrainText((e.Key == Key.Space) ? ' ' : textFind[0]);
+        }
 
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (activeButtonIndex != -1)
+            {
+                buttons[activeButtonIndex].Background = Brushes.Gray;
+                activeButtonIndex = -1;
+            }
+        }
+
+        private void StartButtonClick(object sender, RoutedEventArgs e)
+        {
+            gameStart = true;
+            textForTraine = textForTraine2[indexWord];
+            tbMain.Text = textForTraine;
+        }
+
+        private void StopButtonClick(object sender, RoutedEventArgs e)
+        {
+            gameStart = false;
         }
     }
 }
