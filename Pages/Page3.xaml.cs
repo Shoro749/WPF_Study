@@ -17,12 +17,12 @@ using WPF_Study.Navigator;
 namespace WPF_Study.Pages
 {
     /// <summary>
-    /// Interaction logic for Page2.xaml
+    /// Interaction logic for Page3.xaml
     /// </summary>
-    public partial class Page2 : UserControl
+    public partial class Page3 : UserControl
     {
         string userName;
-        public Page2(string Name)
+        public Page3(string name)
         {
             InitializeComponent();
             userName = Name;
@@ -36,7 +36,7 @@ namespace WPF_Study.Pages
 
         private void Next_Button(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new Page3(userName));
+            NavigatorObject.Switch(new Page1(userName));
         }
     }
 }

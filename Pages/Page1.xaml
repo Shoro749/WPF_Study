@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="WPF_Study.Pages.Page2"
+﻿<UserControl x:Class="WPF_Study.Pages.Page1"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_Study.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Background="Black">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -14,7 +14,7 @@
             <ColumnDefinition Width="0.55*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="spain" Source="../Assets/Spain.jpg" Grid.Column="1" Height="450"/>
+        <Image x:Name="egipt" Source="../Assets/Egypt.jpg" Grid.Column="1"/>
         <StackPanel Background="#FF151515"/>
         <Button Content="Next" BorderBrush="White" Background="White" Foreground="#FF151515" Grid.Column="1" Width="70" Height="30"
         HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="0.456,-0.023" Margin="0,0,10,10" Click="Next_Button"/>
@@ -30,7 +30,7 @@
             HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10" FontFamily="Arial" Click="Back_Click"/>
             <TextBlock x:Name="user" Foreground="White" FontWeight="Bold" FontFamily="Arial Black" VerticalAlignment="Center" 
             HorizontalAlignment="Center" FontSize="20"/>
-            <Label Grid.Row="1" Content="Spain" Foreground="White" FontWeight="Bold" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Label Grid.Row="1" Content="Egypt" Foreground="White" FontWeight="Bold" FontSize="72" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <Label Grid.Row="2" x:Name="l_Disc"/>
             <StackPanel Grid.Row="3" Background="WhiteSmoke"/>
             <Grid Grid.Row="3">
@@ -39,9 +39,9 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Label Content="Population" Foreground="Gray" HorizontalAlignment="Center" Margin="-7,17,0,0" FontFamily="Arial" FontSize="10" />
-                <Label x:Name="tb_Population" Content="45 570 000" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial Black"/>
+                <Label x:Name="tb_Population" Content="97 550 000" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial Black"/>
                 <Label Content="Capital" Foreground="Gray" Grid.Column="1" HorizontalAlignment="Center" Margin="-7,17,0,0" FontFamily="Arial" FontSize="10" />
-                <Label x:Name="tb_Capital" Grid.Column="1" Content="Madrid" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial Black"/>
+                <Label x:Name="tb_Capital" Grid.Column="1" Content="Cairo" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial Black"/>
             </Grid>
         </Grid>
     </Grid>

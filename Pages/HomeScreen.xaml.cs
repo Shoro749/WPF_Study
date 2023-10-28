@@ -35,7 +35,7 @@ namespace WPF_Study.Pages
             else
             {
                 string userName = tb_Login.Text;
-                NavigatorObject.Switch(new Page2(userName));
+                NavigatorObject.Switch(new Page1(userName));
             }
         }
     }
