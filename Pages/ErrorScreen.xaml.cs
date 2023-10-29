@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Study.Navigator;
 
 namespace WPF_Study.Pages
 {
@@ -23,6 +24,11 @@ namespace WPF_Study.Pages
         public ErrorScreen()
         {
             InitializeComponent();
+        }
+
+        private void BackClick(object sender, RoutedEventArgs e)
+        {
+            NavigatorObject.Switch(new HomeScreen());
         }
     }
 }

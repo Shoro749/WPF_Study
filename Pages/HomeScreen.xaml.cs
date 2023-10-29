@@ -28,7 +28,7 @@ namespace WPF_Study.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (tb_Login == null)
+            if (tb_Login.Text == "")
             {
                 NavigatorObject.Switch(new ErrorScreen());
             }

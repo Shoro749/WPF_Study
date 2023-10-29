@@ -27,6 +27,9 @@ namespace WPF_Study.Pages
             InitializeComponent();
             userName = name;
             user.Text = "Hello " + userName;
+            tb_Disc.Text = "Egypt, a country linking northeast Africa with the\nMiddle East, dates to the time of the pharaohs.\n" +
+                "Millennia-old monuments sit along the fertile Nile River\nValley, including Giza's colossal Pyramids and Great\n" +
+                " Sphinx as well as Luxor's hieroglyph-lined Karnak\nTemple and Valley of the Kings tombs.";
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

@@ -27,6 +27,9 @@ namespace WPF_Study.Pages
             InitializeComponent();
             userName = Name;
             user.Text = "Hello " + Name;
+            tb_Disc.Text = "Iceland, a Nordic island nation, is defined by its\ndramatic landscape with volcanoes," +
+            " geysers, hot\nsprings and lava fields. Most of the population lives\nin the capital, Reykjavik, which" +
+            " runs on geothermal\npower and is home to the National and Saga\nmuseums, tracing Iceland's Viking history";
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

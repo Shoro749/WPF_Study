@@ -8,15 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Animation.json" />
+    <None Remove="Assets\Egypt.jpg" />
+    <None Remove="Assets\egypt1.jpg" />
+    <None Remove="Assets\Iceland.jpg" />
     <None Remove="Assets\Spain.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="LottieSharp" Version="2.3.0" />
     <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Egypt.jpg" />
+    <Resource Include="Assets\Iceland.jpg" />
     <Resource Include="Assets\Spain.jpg" />
   </ItemGroup>
 

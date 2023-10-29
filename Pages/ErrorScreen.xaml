@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WPF_Study.Pages"
+             xmlns:local="clr-namespace:WPF_Study.Pages" 
+             xmlns:lottie="clr-namespace:LottieSharp.WPF;assembly=LottieSharp"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Background="Black">
     <Grid>
-            
+        <Label Content="ERROR!" Foreground="Red" HorizontalAlignment="Center" Margin="0,132,0,-132" FontSize="48" FontFamily="Arial Black"/>
+        <Label Content="Type a name before pressing Enter!" Foreground="Red" HorizontalAlignment="Center" Margin="0,208,0,-208" FontFamily="Arial Black"/>
+        <Button Content="Back" Background="WhiteSmoke" BorderBrush="White" Foreground="Black" Width="100" Margin="350,245,350,173" Click="BackClick"/>
     </Grid>
 </UserControl>

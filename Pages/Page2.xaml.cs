@@ -27,6 +27,9 @@ namespace WPF_Study.Pages
             InitializeComponent();
             userName = Name;
             user.Text = "Hello " + Name;
+            tb_Disc.Text = "Spain, a country on Europe's Iberian" +
+                "Peninsula,\nincludes 17 autonomous regions with diverse\ngeography and cultures." +
+                " Capital city Madrid is \nhome to the Royal Palace and Prado museum.\nhousing works by European masters\n";
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
